@@ -1,0 +1,35 @@
+Source: ruby-timecop
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Nandaja Varma <nandaja.varma@gmail.com>,
+           Cédric Boutillier <boutil@debian.org>
+Build-Depends: debhelper-compat (= 12),
+               gem2deb,
+               ruby-activesupport,
+               ruby-minitest,
+               ruby-mocha,
+               ruby-tzinfo
+Standards-Version: 4.4.0
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-timecop.git
+Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-timecop
+Homepage: https://github.com/travisjeffery/timecop
+Testsuite: autopkgtest-pkg-ruby
+XS-Ruby-Versions: all
+
+Package: ruby-timecop
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ruby | ruby-interpreter,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: Ruby library to easily test time-dependent code
+ Timecop makes it easy to travel through or freeze time for creating a
+ predictable and ultimately testable scenario.
+ .
+ It is a wrapper class for manipulating the extensions to the Time, Date,
+ and DateTime objects. It avoids overloading of functions with optional
+ arguments while writing test cases. It is possible to nest multiple
+ calls to Timecop.travel and Timecop.freeze, with each block maintaining
+ concept of "now". Having no dependencies, it works with regular Ruby projects
+ and Ruby on Rails projects.

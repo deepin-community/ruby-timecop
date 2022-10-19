@@ -1,0 +1,68 @@
+ruby-timecop (0.9.1-1) unstable; urgency=medium
+
+  [ Utkarsh Gupta ]
+  * Add salsa-ci.yml
+
+  [ Cédric Boutillier ]
+  * New upstream version 0.9.1
+  * Run wrap-and-sort on packaging files
+  * Bump Standards-Version to 4.4.0 (no changes needed)
+  * Move debian/watch to gemwatch.debian.net
+  * Use salsa.debian.org in Vcs-* fields
+  * Refresh test_helper.rb_editing.patch
+  * Drop fix_path_require.patch, fixed upstream
+  * Drop compat file, rely on debhelper-compat and bump compat level to 12
+  * Use secure copyright file specification URI.
+
+ -- Cédric Boutillier <boutil@debian.org>  Sun, 15 Sep 2019 10:13:02 +0200
+
+ruby-timecop (0.8.0-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+  * debian/rules: set TZ=UTC (Closes: #795663)
+  * Refresh packaging with a new dh-make-ruby run
+
+ -- Antonio Terceiro <terceiro@debian.org>  Thu, 10 Sep 2015 19:59:42 -0300
+
+ruby-timecop (0.7.3-1) unstable; urgency=medium
+
+  * Imported Upstream version 0.7.3
+  * Refresh patches
+  * Buid-depends on ruby-minitest instead of ruby-test-unit
+  * Bump Standards-Version to 3.9.6 (no changes needed)
+
+ -- Cédric Boutillier <boutil@debian.org>  Tue, 26 May 2015 23:33:34 +0200
+
+ruby-timecop (0.7.1-1) unstable; urgency=medium
+
+  [ Jérémy Bobbio ]
+  * Add git-buildpackage configuration
+
+  [ Cédric Boutillier ]
+  * Imported Upstream version 0.7.1
+  * Add myself to the uploders
+  * Bump Standards-Version to 3.9.5 (no changes needed)
+  * Build-depend on ruby-test-unit (Closes: #759898)
+  * Add autopkgtest support
+    + prefix tests path with ./
+    + add fix_path_require.patch to use an absolute path to require timecop in
+      tests, as the local lib/ directory is moved away during autopkgtest.
+  * Do not install History.rdoc, not shipped anymore by upstream
+
+ -- Cédric Boutillier <boutil@debian.org>  Sun, 31 Aug 2014 23:57:29 +0200
+
+ruby-timecop (0.5.9-2) unstable; urgency=low
+
+  * Team upload.
+  * Add missing Build-Depends on ruby-tzinfo. (Closes: #713166)
+  * Update project homepage URL.
+  * Clean up boilerplate in debian/rules.
+
+ -- Jérémy Bobbio <lunar@debian.org>  Sun, 23 Jun 2013 13:32:29 +0200
+
+ruby-timecop (0.5.9-1) unstable; urgency=low
+
+  * Initial release (Closes: #692052)
+
+ -- Nandaja Varma <nandaja.varma@gmail.com>  Thu, 01 Nov 2012 23:33:19 +0400

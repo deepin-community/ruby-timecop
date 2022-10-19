@@ -1,0 +1,7 @@
+#!/usr/bin/make -f
+
+export GEM2DEB_TEST_RUNNER = --check-dependencies
+export TZ=UTC
+
+%:
+	dh $@ --buildsystem=ruby --with ruby

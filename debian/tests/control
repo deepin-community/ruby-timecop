@@ -1,0 +1,6 @@
+Test-Command: gem2deb-test-runner --autopkgtest 2>&1
+Depends: @, gem2deb-test-runner, ruby-test-unit, ruby-mocha, ruby-activesupport, ruby-tzinfo
+
+Test-Command: ruby -r "timecop" -e "puts true"
+Depends: @
+
